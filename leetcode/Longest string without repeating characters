@@ -1,0 +1,14 @@
+var lengthOfLongestSubstring = function(s) {
+    let longest = 0
+    let curr = new Set
+    for(let l of s){
+        if(!curr.has(l)){
+            curr.add(l)
+        } else {
+            longest = Math.max(longest, curr.size)
+            curr.clear()
+            curr.add(l)
+        }
+    }
+    return longest
+};
