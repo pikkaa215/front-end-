@@ -1,0 +1,19 @@
+Input: releaseTimes = [9,29,49,50], keysPressed = "cbcd"
+Output: "c"
+
+/**
+ * @param {number[]} releaseTimes
+ * @param {string} keysPressed
+ * @return {character}
+ */
+var slowestKey = function (releaseTimes, keysPressed) {
+    let max = 0, key;
+    for (let i = 0; i < releaseTimes.length; i++) {
+        const diff = releaseTimes[i] - (releaseTimes[i - 1] || 0);
+        if (diff > max || (diff === max && keysPressed[i] > key)) {
+            max = diff;
+            key = keysPressed[i];
+        }
+    }
+    return key;
+};
