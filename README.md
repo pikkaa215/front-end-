@@ -9,3 +9,7 @@ Easy
 Medium
 1. [1283. Find the Smallest Divisor Given a Threshold](https://github.com/pikkaa215/front-end-/blob/main/leetcode/1283.%20Find%20the%20Smallest%20Divisor%20Given%20a%20Threshold)
 2. [204 Count Primes](https://github.com/pikkaa215/front-end-/blob/main/leetcode/204.%20Count%20Primes)
+
+Algorithm
+Binary Search
+1. [Binary search](https://github.com/pikkaa215/front-end-/blob/main/leetcode/704%20Binary%20search)
