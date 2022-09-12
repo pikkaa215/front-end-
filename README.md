@@ -13,3 +13,7 @@ Medium
 Algorithm
 Binary Search
 1. [Binary search](https://github.com/pikkaa215/front-end-/blob/main/leetcode/704%20Binary%20search)
+
+String
+=> Easy
+1. [Longest Palindrome](https://github.com/pikkaa215/front-end-/blob/main/leetcode/5.%20Longest%20palindrome%20substring)
