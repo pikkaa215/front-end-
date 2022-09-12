@@ -1,0 +1,29 @@
+28. Find the Index of the First Occurrence in a String
+
+
+class Solution {
+    public int strStr(String haystack, String needle) {
+        if (needle == null || needle.equals("")) {
+            return 0;
+        }
+        
+      
+        for (int startIndex =  0; startIndex < haystack.length() - needle.length() + 1; startIndex++) {
+            boolean notEqual = false;
+            
+            for (int currentLetter = 0; currentLetter < needle.length(); currentLetter++) {
+                if(haystack.charAt(currentLetter + startIndex) != needle.charAt(currentLetter)) {
+                    notEqual = true;
+                    break;
+                }
+            }
+            
+            if (!notEqual) {
+                return startIndex;
+            }
+
+        }
+         return -1;  
+        
+    }
+}
