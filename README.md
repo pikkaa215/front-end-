@@ -15,5 +15,7 @@ Binary Search
 1. [Binary search](https://github.com/pikkaa215/front-end-/blob/main/leetcode/704%20Binary%20search)
 
 String
-=> Easy
+
+* Easy
+1. [28. Find the Index of the First Occurrence in a String](https://github.com/pikkaa215/front-end-/blob/main/leetcode/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String)
 1. [Longest Palindrome](https://github.com/pikkaa215/front-end-/blob/main/leetcode/5.%20Longest%20palindrome%20substring)
