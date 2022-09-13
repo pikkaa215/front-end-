@@ -18,6 +18,7 @@ String
 
 * Easy
 1. [Valid Palindrome](https://github.com/pikkaa215/front-end-/blob/main/leetcode/125.%20Valid%20Palindrome)
+2. [Valid Palindrome II](https://github.com/pikkaa215/front-end-/blob/main/leetcode/680.%20Valid%20Palindrome%20II)
 
 Medium
 
