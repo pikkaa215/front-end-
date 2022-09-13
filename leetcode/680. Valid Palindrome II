@@ -1,0 +1,62 @@
+class Solution {
+    public boolean validPalindrome(String s) {
+        if (s == null) {
+            return false;
+        }
+        
+        
+        Pair pair = findDifference(s, 0, s.length() - 1);
+        if (pair.start >= pair.end) {
+            return true;
+        }
+        return isPalindrome(s, pair.start + 1, pair.end) || isPalindrome(s, pair.start, pair.end - 1);
+        
+    }
+    
+    private Pair findDifference (String s, int start, int end) {
+         while (start < end && s.charAt(start) == s.charAt(end)) {
+            start++;
+            end--;     
+        }
+        return new Pair(start, end); 
+    }
+    
+    private boolean isPalindrome (String s, int start, int end) {
+        Pair pair = findDifference(s, start, end);
+        return pair.start >= pair.end;
+    }    
+}
+
+class Pair {
+    int start, end;
+    public Pair(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
+}
+
+
+
+//
+class Solution {
+    public boolean validPalindrome(String s) {
+        if (s == null) {
+            return false
+        }
+        int start = 0, end = s.length() - 1;
+        while (start < end  && s.charAt(start) == s.charAt(end)) {
+            start++;
+            end--; 
+        }
+        return isPalindrome(s, start + 1, end) || isPalindrome(s, start, end - 1) || start >= end;
+        
+    }
+    
+    private boolean isPalindrome (String s, int start, int end) {
+        while (start < end && s.charAt(start) == s.charAt(end)) {
+            start++;
+            end--;     
+        }
+        return start >= end;
+    }    
+}
