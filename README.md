@@ -28,3 +28,5 @@ Medium
 
 双指针：
 1. [TwoSum](https://github.com/pikkaa215/front-end-/blob/main/leetcode/1.%20Two%20Sum)
+
+[Sort Method](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Sort%20Method)
