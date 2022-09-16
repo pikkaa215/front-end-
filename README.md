@@ -30,3 +30,6 @@ Medium
 1. [TwoSum](https://github.com/pikkaa215/front-end-/blob/main/leetcode/1.%20Two%20Sum)
 
 [Sort Method](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Sort%20Method)
+
+回文串
+1.[Is an integer palinfrome?](https://github.com/pikkaa215/front-end-/blob/main/leetcode/491%20if%20Plindrome)
