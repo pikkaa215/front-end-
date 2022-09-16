@@ -1,0 +1,26 @@
+判断整数是否是回文数
+
+public class Solution {
+    /**
+     * @param num: a positive number
+     * @return: true if it's a palindrome or false
+     */
+    public boolean isPalindrome(int num) {
+        // write your code here
+        if (num < 0) {
+            return false;
+        }
+
+        return num == reverseNum(num);
+
+    }
+
+    public int reverseNum(int num) {
+        int rev = 0;
+       while (num > 0) {
+         rev = rev * 10 + num % 10;
+         num /= 10;
+       }
+       return rev;
+    }
+}
