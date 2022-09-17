@@ -38,3 +38,4 @@ Medium
 二分法
 1. [search insert position](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Search%20Insert%20Position)
 2. [Sqrt(x)](https://github.com/pikkaa215/front-end-/blob/main/leetcode/sqrt(x))
+3. [The closest number in a sorted array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/closest%20number%20in%20sorted%20array)
