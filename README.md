@@ -34,3 +34,6 @@ Medium
 
 回文串
 1.[Is an integer palinfrome?](https://github.com/pikkaa215/front-end-/blob/main/leetcode/491%20if%20Plindrome)
+
+二分法
+1. [search insert position](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Search%20Insert%20Position)
