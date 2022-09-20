@@ -44,3 +44,4 @@ Medium
 6. [Smallest character larger than target](https://github.com/pikkaa215/front-end-/new/main/leetcode)
 7. [search in big sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
 8. [Find k closest element in a sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
+9. [Max number in a mountain sequence](https://github.com/pikkaa215/front-end-/new/main/leetcode)
