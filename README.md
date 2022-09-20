@@ -43,3 +43,4 @@ Medium
 5. [Valid perfect square](https://github.com/pikkaa215/front-end-/new/main/leetcode)
 6. [Smallest character larger than target](https://github.com/pikkaa215/front-end-/new/main/leetcode)
 7. [search in big sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
+8. [Find k closest element in a sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
