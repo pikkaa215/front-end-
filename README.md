@@ -47,3 +47,4 @@ Medium
 9. [Max number in a mountain sequence](https://github.com/pikkaa215/front-end-/new/main/leetcode)
 10. [Find minimum in a rotated sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
 11. [Search in a rotated sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
+12. [Find peak element](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Find%20peak%20element)
