@@ -48,3 +48,4 @@ Medium
 10. [Find minimum in a rotated sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
 11. [Search in a rotated sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
 12. [Find peak element](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Find%20peak%20element)
+13. [Wood cut](https://github.com/pikkaa215/front-end-/new/main/leetcode)
