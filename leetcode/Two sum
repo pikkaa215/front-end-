@@ -1,0 +1,74 @@
+Description
+Design and implement a TwoSum class. It should support the following operations: add and find.
+
+add - Add the number to an internal data structure.
+find - Find if there exists any pair of numbers which sum is equal to the value.
+
+## 1. Hash Table
+public class TwoSum {
+    /**
+     * @param number: An integer
+     * @return: nothing
+     */
+
+
+     private Map<Integer, Integer> numToCntMap;
+
+     public TwoSum() {
+       numToCntMap = new HashMap<Integer, Integer>();
+     }
+
+    public void add(int number) {
+        // write your code here
+        numToCntMap.put(number, numToCntMap.getOrDefault(number, 0) + 1);
+    }
+
+    /**
+     * @param value: An integer
+     * @return: Find if there exists any pair of numbers which sum is equal to the value.
+     */
+    public boolean find(int value) {
+        // write your code here
+        for (Integer num : numToCntMap.keySet()) {
+            int num2 = value - num;
+            int targetCnt = num == num2 ? 2 : 1;
+            if (numToCntMap.getOrDefault(num2, 0) >= targetCnt) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+2. Two pointers => find o(n) o(n) 问是find操作多还是add多。
+public class TwoSum {
+    /*
+     * @param number: An integer
+     * @return: nothing
+     */
+    ArrayList<Integer> nums = new ArrayList<>();
+    
+    public void add(int number) {
+        // write your code here
+        nums.add(number);
+    }
+
+    /*
+     * @param value: An integer
+     * @return: Find if there exists any pair of numbers which sum is equal to the value.
+     */
+    public boolean find(int value) {
+        // write your code here
+        Collections.sort(nums);
+        for (int i = 0, j = nums.size() - 1; i < j;) {
+            if (nums.get(i) + nums.get(j) == value) {
+                return true;
+            } else if (nums.get(i) + nums.get(j) < value) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+        return false;
+    }
+}
