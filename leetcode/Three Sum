@@ -1,0 +1,55 @@
+Description
+Design and implement a TwoSum class. It should support the following operations: add and find.
+
+add - Add the number to an internal data structure.
+find - Find if there exists any pair of numbers which sum is equal to the value.
+
+public class Solution {
+    /**
+     * @param numbers: Give an array numbers of n integer
+     * @return: Find all unique triplets in the array which gives the sum of zero.
+     *          we will sort your return value in output
+     */
+    public List<List<Integer>> threeSum(int[] numbers) {
+        // write your code here
+        List <List<Integer>> result = new ArrayList<>();
+        
+        if (numbers == null || numbers.length == 0) {
+            return null;
+        }
+        Arrays.sort(numbers);
+
+        for (int i = 0; i < numbers.length - 2; i++) {
+            if (i > 0 && numbers[i] == numbers[i - 1]) {
+                continue;
+            }
+            twoSum(numbers, i , result);
+        }  
+        return result; 
+    }
+    public void twoSum(int[] numbers, int index, List<List<Integer>> result) {
+        int left = index + 1, right = numbers.length - 1;
+        int target = -numbers[index];
+        while (left < right) {
+            int twoSum = numbers[left] + numbers[right];
+            if (twoSum < target) {
+                left++;
+            }
+            else if (twoSum > target) {
+                right--;
+            }
+            else {
+                List<Integer> res = new ArrayList<>();
+                res.add(numbers[index]);
+                res.add(numbers[left]);
+                res.add(numbers[right]);
+                result.add(res);
+                right--;
+                left++;
+                while (left < right && numbers[left] == numbers[left - 1]) {
+                    left++;
+                }
+            }
+        }
+    }
+}
