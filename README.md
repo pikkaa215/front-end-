@@ -27,7 +27,7 @@ Medium
 
 
 双指针：
-1. [TwoSum](https://github.com/pikkaa215/front-end-/blob/main/leetcode/1.%20Two%20Sum)
+1. [TwoSum](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Two%20sum)
 
 [Sort Method](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Sort%20Method)
 [Kth Largest](https://github.com/pikkaa215/front-end-/blob/main/leetcode/215.%20Kth%20Largest%20Element%20in%20an%20Array)
@@ -40,12 +40,12 @@ Medium
 2. [Sqrt(x)](https://github.com/pikkaa215/front-end-/blob/main/leetcode/sqrt(x))
 3. [The closest number in a sorted array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/closest%20number%20in%20sorted%20array)
 4. [Guess number higher or lower](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Guess%20number%20higher%20or%20lower)
-5. [Valid perfect square](https://github.com/pikkaa215/front-end-/new/main/leetcode)
-6. [Smallest character larger than target](https://github.com/pikkaa215/front-end-/new/main/leetcode)
-7. [search in big sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
-8. [Find k closest element in a sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
-9. [Max number in a mountain sequence](https://github.com/pikkaa215/front-end-/new/main/leetcode)
-10. [Find minimum in a rotated sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
-11. [Search in a rotated sorted array](https://github.com/pikkaa215/front-end-/new/main/leetcode)
+5. [Valid perfect square](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Valid%20perfect%20square)
+6. [Smallest character larger than target](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Smallest%20character%20larger%20than%20target)
+7. [search in big sorted array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Search%20in%20big%20sorted%20array)
+8. [Find k closest element in a sorted array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Find%20K%20Closest%20Elements)
+9. [Max number in a mountain sequence](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Maximum%20Number%20in%20Mountain%20Sequence)
+10. [Find minimum in a rotated sorted array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Find%20Minimum%20in%20Rotated%20Sorted%20Array)
+11. [Search in a rotated sorted array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Search%20in%20Rotated%20Sorted%20Array)
 12. [Find peak element](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Find%20peak%20element)
-13. [Wood cut](https://github.com/pikkaa215/front-end-/new/main/leetcode)
+13. [Wood cut](https://github.com/pikkaa215/front-end-/blob/main/leetcode/183%20%C2%B7%20Wood%20Cut)
