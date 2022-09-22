@@ -28,6 +28,7 @@ Medium
 
 双指针：
 1. [TwoSum](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Two%20sum)
+2. [Three Sum](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Three%20Sum)
 
 [Sort Method](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Sort%20Method)
 [Kth Largest](https://github.com/pikkaa215/front-end-/blob/main/leetcode/215.%20Kth%20Largest%20Element%20in%20an%20Array)
