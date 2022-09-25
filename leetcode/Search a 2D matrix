@@ -1,0 +1,89 @@
+
+Description
+Write an efficient algorithm that searches for a value in an m x n matrix, return The number of occurrence of it.
+
+This matrix has the following properties:
+
+Integers in each row are sorted from left to right.
+Integers in each column are sorted from up to bottom.
+No duplicate integers in each row or column.
+
+//注意看题目条件： 没有duplicates
+public class Solution {
+    /**
+     * @param matrix: A list of lists of integers
+     * @param target: An integer you want to search in matrix
+     * @return: An integer indicate the total occurrence of target in the given matrix
+     */
+    public int searchMatrix(int[][] matrix, int target) {
+        // write your code here
+        if(matrix.length == 0 || matrix[0].length == 0 || matrix == null) {
+            return 0;
+        }
+        int count = 0;
+        for (int row = 0; row < matrix.length; row++) {
+           count += binarySearch(matrix[row], target);
+        }
+        return count;
+
+
+    }
+
+    private int binarySearch(int[] row, int target) {
+        int start = 0, end = row.length - 1;
+        int count = 0;
+        while (start + 1 < end && row[start] <= target && row[end] >= target) {
+            int mid = start + (end - start) / 2;
+            if (row[mid] < target) {
+               start = mid;
+            } 
+            else if (row[mid] > target) {
+                end = mid;
+            }
+            else {return 1;}
+        }
+        if (row[start] == target) {
+            return 1;
+        }
+        if (row[end] == target) {
+            return 1;
+        }
+        return 0;
+    }
+}
+
+//方法2
+// Approach #1 - Divide-and-conquer algorithm - O(n + m) T O(1) S - just search from the corner. Every step you can easily eliminate a row and/ or col. 
+public class Solution {
+    /**
+     * @param matrix: A list of lists of integers
+     * @param target: An integer you want to search in matrix
+     * @return: An integer indicate the total occurrence of target in the given matrix
+     */
+    public int searchMatrix(int[][] matrix, int target) {
+        // write your code here
+        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
+            return 0;
+        }
+
+        int n = matrix.length, m = matrix[0].length;
+        int i = n - 1, j = 0, counter = 0;
+        while (isValid(i, j, n, m)) {
+            if (matrix[i][j] == target) {
+                counter++;
+                i--;
+                j++;
+            } else if (matrix[i][j] < target) {
+                j++;
+            } else {
+                i--;
+            }
+        }
+
+        return counter;
+    }
+
+    private boolean isValid(int i, int j, int n, int m) {
+        return (i >= 0 && i < n && j >= 0 && j < m);
+    }
+}
