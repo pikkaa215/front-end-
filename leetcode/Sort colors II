@@ -1,0 +1,42 @@
+Description
+Given an array of n objects with k different colors (numbered from 1 to k), sort them so that objects of the same color are adjacent, with the colors in the order 1, 2, ... k.
+
+public class Solution {
+    /**
+     * @param colors: A list of integer
+     * @param k: An integer
+     * @return: nothing
+     */
+    public void sortColors2(int[] colors, int k) {
+        // write your code here
+        if (colors == null || colors.length == 0) {
+            return;
+        }
+        partitionColor(colors, 0, colors.length - 1, 1, k);
+    }
+
+    private void partitionColor(int[] colors, int start, int end, int colorFirst, int colorLast) {
+        int midColor = colorFirst + (colorLast - colorLast) / 2;
+        if (colorLast == colorFirst) {
+            return;
+        }
+        int s = start, e = end;
+        while (s <= e) {
+            while (s <= e && colors[s] <= midColor) {
+                s++;
+            }
+            while (s <= e && colors[e] > midColor) {
+                e--;
+            }
+            if (s <= e) {
+                int temp = colors[s];
+                colors[s] = colors[e];
+                colors[e] = temp;
+                s++;
+                e--;
+            }
+        }
+        partitionColor(colors, start, e, colorFirst, midColor);
+        partitionColor(colors, s, end, midColor + 1, colorLast);
+
+    }
