@@ -55,3 +55,4 @@ Medium
 11. [Search in a rotated sorted array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Search%20in%20Rotated%20Sorted%20Array)
 12. [Find peak element](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Find%20peak%20element)
 13. [Wood cut](https://github.com/pikkaa215/front-end-/blob/main/leetcode/183%20%C2%B7%20Wood%20Cut)
+14. [Search a 2D matrix](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Search%20a%202D%20matrix)
