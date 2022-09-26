@@ -25,6 +25,9 @@ Medium
 1. [28. Find the Index of the First Occurrence in a String](https://github.com/pikkaa215/front-end-/blob/main/leetcode/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String)
 2. [Longest Palindrome](https://github.com/pikkaa215/front-end-/blob/main/leetcode/5.%20Longest%20palindrome%20substring)
 
+Binary Tree
+1. [Binary tree](https://www.lintcode.com/problem/69/)
+
 
 双指针：
 1. [TwoSum](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Two%20sum)
