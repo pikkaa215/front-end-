@@ -1,0 +1,39 @@
+Description
+Merge two given sorted ascending integer array A and B into a new sorted integer array.
+
+public class Solution {
+    /**
+     * @param a: sorted integer array A
+     * @param b: sorted integer array B
+     * @return: A new sorted integer array
+     */
+    public int[] mergeSortedArray(int[] a, int[] b) {
+        // write your code here
+        int[] results = new int[a.length + b.length];
+        if (a.length == 0 && b.length == 0) {
+            return results;
+        }
+        int index1 = 0, index2 = 0;
+        int index = 0;
+        while (index1 < a.length && index2 < b.length) {
+            if (a[index1] <= b[index2]) {
+               
+                results[index++] = a[index1];
+                index1++;
+            } 
+            else {
+              results[index++] = b[index2];
+              index2++;
+            }
+        }
+        while (index1 < a.length) {
+            results[index++] = a[index1];
+            index1++;
+        }
+        while (index2 < b.length) {
+            results[index++] = b[index2];
+            index2++;
+        }
+        return results;
+    }
+}
