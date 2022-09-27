@@ -1,0 +1,69 @@
+Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+If target is not found in the array, return [-1, -1].
+
+You must write an algorithm with O(log n) runtime complexity.
+
+ 
+ 
+ public class Solution {
+    /**
+     * @param nums: the array of integers
+     * @param target: 
+     * @return: the starting and ending position
+     */
+    public List<Integer> searchRange(List<Integer> nums, int target) {
+        // Write your code here.
+        List<Integer> arraylist = new ArrayList<Integer>();
+
+       
+
+        int firstOccurence = findIndex(nums, target, true);
+        arraylist.add(firstOccurence);
+
+        if (firstOccurence != -1) {
+            System.out.print(findIndex(nums, target, false));
+            arraylist.add(findIndex(nums, target, false));
+        } else {
+           arraylist.add(-1);
+        }
+        return arraylist;
+    }
+
+    private int findIndex(List<Integer> nums, int target, boolean isFirst) {
+        int start = 0, end = nums.size() - 1;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (isFirst) {
+               if (nums.get(mid) >= target) {
+                   end = mid;
+               }
+               else {
+                  start = mid;
+               }
+            }
+            else {
+                if (nums.get(mid) <= target) {
+                    start = mid;
+                } else {
+                    end = mid;
+                }
+            }
+        }
+        if (nums.get(start) == target && isFirst) {
+            return start;
+        }
+        if (nums.get(end) == target && isFirst) {
+            return end;
+        }
+        System.out.print(end);
+        if (nums.get(end) == target && !isFirst) {
+            return end;
+        }
+        if (nums.get(start) == target && !isFirst) {
+            return start;
+        }
+        return -1;
+
+    }
+}
