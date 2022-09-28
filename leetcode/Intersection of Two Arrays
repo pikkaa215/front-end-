@@ -1,7 +1,7 @@
 Description
 Given two arrays, write a function to compute their intersection.
 
-
+//空的情况怎么处理
 
 public class Solution {
     /**
