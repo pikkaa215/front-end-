@@ -1,0 +1,62 @@
+Description
+Merge two sorted (ascending) lists of interval and return it as a new sorted list. The new sorted list should be made by splicing together the intervals of the two lists and sorted in ascending order.
+
+/**
+ * Definition of Interval:
+ * public class Interval {
+ *     int start, end;
+ *     Interval(int start, int end) {
+ *         this.start = start;
+ *         this.end = end;
+ *     }
+ * }
+ */
+
+public class Solution {
+    /**
+     * @param list1: one of the given list
+     * @param list2: another list
+     * @return: the new sorted list of interval
+     */
+    public List<Interval> mergeTwoInterval(List<Interval> list1, List<Interval> list2) {
+        // write your code here
+        if (list1 == null) {
+            return list2;
+        }
+        if (list2 == null) {
+            return list1;
+        }
+
+        int ind1 = 0, ind2 = 0;
+        List<Interval> res = new ArrayList<Interval>();
+        while (ind1 < list1.size() && ind2 < list2.size()) {
+            if (list1.get(ind1).start < list2.get(ind2).start) {
+                mergeList(res, list1.get(ind1++));
+            } else {
+                mergeList(res, list2.get(ind2++));
+            }
+        }
+        while (ind1 < list1.size()) {
+            mergeList(res, list1.get(ind1++));
+        }
+        while(ind2 < list2.size()) {
+            mergeList(res, list2.get(ind2++));
+
+        }
+        return res;
+    }
+
+    private void mergeList(List<Interval> res, Interval t) {
+        if (res.size() == 0) {
+            res.add(t);
+            return;
+        }
+        Interval currentInt = res.get(res.size() - 1);
+        if (currentInt.end < t.start) {
+            res.add(t);
+        } else {
+            currentInt.end = Math.max(currentInt.end, t.end);
+        }      
+    }
+}
+
