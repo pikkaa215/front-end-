@@ -41,6 +41,7 @@ Binary Tree
 9. [Remove Duplicates from Sorted Array II](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Remove%20Duplicates%20from%20Sorted%20Array%20II)
 10. [Intersection of Two Arrays](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Intersection%20of%20Two%20Arrays)
 11. [Reverse Array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Reverse%20Array)
+12. [Merge Two Sorted Intervals](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Merge%20Two%20Sorted%20Interval%20Lists)
 
 [Sort Method](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Sort%20Method)
 [Kth Largest](https://github.com/pikkaa215/front-end-/blob/main/leetcode/215.%20Kth%20Largest%20Element%20in%20an%20Array)
