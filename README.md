@@ -43,6 +43,7 @@ Binary Tree
 11. [Reverse Array](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Reverse%20Array)
 12. [Merge Two Sorted Intervals](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Merge%20Two%20Sorted%20Interval%20Lists)
 13. [Add zero](https://github.com/pikkaa215/front-end-/blob/main/leetcode/add%20Zero)
+14.  [Shortest Palindrome](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Shortest%20Palindrome)
 
 [Sort Method](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Sort%20Method)
 [Kth Largest](https://github.com/pikkaa215/front-end-/blob/main/leetcode/215.%20Kth%20Largest%20Element%20in%20an%20Array)
