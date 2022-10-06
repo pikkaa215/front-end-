@@ -72,3 +72,4 @@ BFS
 
 1. [Clone graph](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Clone%20graph)
 2. [Word Ladder](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Word%20ladder)
+3. [Number of islands](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Number%20of%20Islands)
