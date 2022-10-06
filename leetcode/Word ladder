@@ -1,0 +1,65 @@
+Description
+Given two words (start and end), and a dictionary, find the shortest transformation sequence from start to end, output the length of the sequence.
+Transformation rule such that:
+
+Only one letter can be changed at a time
+Each intermediate word must exist in the dictionary. (Start and end words do not need to appear in the dictionary ))
+
+public class Solution {
+    /**
+     * @param start: a string
+     * @param end: a string
+     * @param dict: a set of string
+     * @return: An integer
+     */
+    public int ladderLength(String start, String end, Set<String> dict) {
+        // write your code here
+        dict.add(end);
+        HashSet<String> visited = new HashSet<String>();
+        Queue<String> queue = new LinkedList<String>();
+        queue.offer(start);
+        visited.add(start);
+        int length = 1;
+
+        while(!queue.isEmpty()) {
+            length++;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                String word = queue.poll();
+                for (String nextword: getNextWord(word, dict)) {
+                    if (visited.contains(nextword)) {
+                        continue;
+                    }
+                    if (nextword.equals(end)) {
+                        return length;
+                    }
+                    visited.add(nextword);
+                    queue.offer(nextword);
+                }
+            }
+        }
+        return 0;
+    }
+
+    private String replace(String word, int index, char replacement) {
+        char[] chars = word.toCharArray();
+        chars[index] = replacement;
+        return new String(chars);
+    }
+
+    private ArrayList<String> getNextWord(String word, Set<String> dict) {
+        ArrayList<String> nextWords = new ArrayList<String>();
+        for (char c = 'a'; c <= 'z'; c++) {
+            for (int i = 0; i < word.length(); i++) {
+                if (c == word.charAt(i)) {
+                    continue;
+                }
+               String nextword = replace(word, i, c);
+                if (dict.contains(nextword)) {
+                    nextWords.add(nextword);
+                }
+            }
+         }
+         return nextWords;
+    }
+}
