@@ -1,0 +1,51 @@
+
+ Description
+Given an directed graph, a topological order of the graph nodes is defined as follow:
+
+For each directed edge A -> B in graph, A must before B in the order list.
+The first node in the order can be any node in the graph with no nodes direct to it.
+Find any topological order for the given graph.
+
+public class Solution {
+    /**
+     * @param graph: A list of Directed graph node
+     * @return: Any topological order for the given graph.
+     */
+
+    public ArrayList<DirectedGraphNode> topSort(ArrayList<DirectedGraphNode> graph) {
+        // write your code here
+        Map<DirectedGraphNode, Integer> inDegree = getInDegree(graph);
+
+        Queue<DirectedGraphNode> queue = new ArrayDeque<>();
+        for (DirectedGraphNode node: graph) {
+            if (!inDegree.containsKey(node)) {
+                queue.offer(node);
+            }
+        }
+        
+        ArrayList<DirectedGraphNode> topoOrder = new ArrayList<>();
+
+        while (!queue.isEmpty()) {
+            DirectedGraphNode currNode = queue.poll();
+            topoOrder.add(currNode);
+            for (DirectedGraphNode node: currNode.neighbors) {
+                inDegree.put(node, inDegree.get(node) - 1);
+                if (inDegree.get(node) == 0) {
+                    queue.offer(node);
+                }
+            }
+
+        }
+        return topoOrder;
+    }
+
+    private Map<DirectedGraphNode, Integer> getInDegree(ArrayList<DirectedGraphNode> graph) {
+        Map<DirectedGraphNode, Integer> inDegree = new HashMap();
+        for (DirectedGraphNode node: graph) {
+            for (DirectedGraphNode neighbour: node.neighbors) {
+                inDegree.put(neighbour, inDegree.getOrDefault(neighbour, 0) + 1);
+            }
+        }
+        return inDegree;
+
+    }
