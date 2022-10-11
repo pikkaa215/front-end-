@@ -1,0 +1,53 @@
+Description
+There are a total of n courses you have to take, labeled from 0 to n - 1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+
+Given the total number of courses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses.
+
+There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all courses, return an empty array.
+
+public class Solution {
+    /**
+     * @param numCourses: a total of n courses
+     * @param prerequisites: a list of prerequisite pairs
+     * @return: the course order
+     */
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        // write your code here
+        List[] graph = new ArrayList[numCourses];
+        for (int i = 0; i < numCourses; i++) {
+            graph[i] = new ArrayList<Integer>();
+
+        }
+
+        int[] inDegree = new int[numCourses];
+        for (int[] edge: prerequisites) {
+            graph[edge[1]].add(edge[0]);
+            inDegree[edge[0]]++;
+        }
+
+        Queue<Integer> queue = new LinkedList<Integer>();
+        for (int i = 0; i < inDegree.length; i++) {
+            if (inDegree[i] == 0) {
+                queue.add(i);
+            }
+        }
+        int numberOfCourse = 0;
+        int[] topoOrder = new int[numCourses];
+
+        while (!queue.isEmpty()) {
+           int currCourse = queue.poll();
+           topoOrder[numberOfCourse] = currCourse;
+           numberOfCourse++;
+           for (int i = 0; i < graph[currCourse].size(); i++) {
+               int nextCourse = (int)graph[currCourse].get(i);
+               inDegree[nextCourse]--;
+               if (inDegree[nextCourse] == 0) {
+                   queue.add(nextCourse);
+               }
+           }
+
+        }
+        return numberOfCourse == numCourses ? topoOrder : new int[0];
+    }
+}
