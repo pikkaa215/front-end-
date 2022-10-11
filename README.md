@@ -74,3 +74,4 @@ BFS
 2. [Word Ladder](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Word%20ladder)
 3. [Number of islands](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Number%20of%20Islands)
 4. [Knights' Shortest Path](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Knights'%20shortest%20path)
+5. [Course Schedule ii](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Course%20schedule%20II)
