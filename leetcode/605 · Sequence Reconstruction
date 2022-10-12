@@ -1,0 +1,105 @@
+Description
+Check whether the original sequence org can be uniquely reconstructed from the sequences in seqs. The org sequence is a permutation of the integers from 1 to n, with 1 \leq n \leq 10^41≤n≤10 
+4
+ . Reconstruction means building a shortest common supersequence of the sequences in seqs (i.e., a shortest sequence so that all sequences in seqs are subsequences of it). Determine whether there is only one sequence that can be reconstructed from seqs and it is the org sequence.
+ 
+ public class Solution {
+    /**
+     * @param org: a permutation of the integers from 1 to n
+     * @param seqs: a list of sequences
+     * @return: true if it can be reconstructed only one or false
+     */
+    public boolean sequenceReconstruction(int[] org, int[][] seqs) {
+        // write your code here
+        Map<Integer, Set<Integer>> graph = buildGraph(seqs);
+        
+        //topological sorting
+        Map<Integer, Integer> inDegrees = getIndegrees(seqs, graph);
+        
+        List<Integer> zeroInDegrees = new ArrayList<Integer>();
+        
+        for (int i : inDegrees.keySet()) {
+            if (inDegrees.get(i) == 0) {
+                zeroInDegrees.add(i);
+            }
+        }
+        
+        Queue<Integer> queue = new LinkedList<>();
+        List<Integer> result = new ArrayList<>();
+    
+        for (int i : zeroInDegrees) {
+            queue.offer(i);
+        }
+        
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            if (size > 1) {
+                return false;
+            }
+            
+            int i = queue.poll();
+            result.add(i);
+            
+            if (!graph.containsKey(i)) {
+                continue;
+            }
+            
+            for (int next : graph.get(i)) {
+                inDegrees.put(next, inDegrees.get(next) - 1);
+                if (inDegrees.get(next) == 0) {
+                    queue.offer(next);
+                }
+            }
+            
+        }
+        
+        if (result.size() != org.length) {
+            return false;
+        }
+        
+        for (int i = 0; i < org.length; i++) {
+            if (org[i] != result.get(i)) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    private Map<Integer, Integer> getIndegrees(int[][] seqs, Map<Integer, Set<Integer>> graph) {
+        Map<Integer, Integer> inDegrees = new HashMap<Integer, Integer>();
+        
+        for (int i = 0; i < seqs.length; i++) {
+            for (int j = 0; j < seqs[i].length; j++) {
+                inDegrees.put(seqs[i][j], 0);
+            }
+        }
+
+        for (int i : graph.keySet()) {
+            for (int next : graph.get(i)) {
+                inDegrees.put(next, inDegrees.get(next) + 1);
+            }
+        }
+        
+        return inDegrees;
+    }
+    
+    private Map<Integer, Set<Integer>> buildGraph(int[][] seqs) {
+        Map<Integer, Set<Integer>> graph = new HashMap<Integer, Set<Integer>>();
+        
+        for (int i = 0; i < seqs.length; i++) {
+            for (int j = 0; j < seqs[i].length - 1; j++) {
+                
+                if (!graph.containsKey(seqs[i][j]) ) {
+                    Set<Integer> set = new HashSet<Integer>();
+                    set.add(seqs[i][j + 1]);
+                    graph.put(seqs[i][j], set);
+                } else {
+                    graph.get(seqs[i][j]).add(seqs[i][j + 1]);
+                }
+            }
+        }
+        
+        return graph;
+    }
+}
