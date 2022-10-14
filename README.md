@@ -77,3 +77,7 @@ BFS
 5. [Course Schedule ii](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Course%20schedule%20II)
 6. [Topological Order](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Topological%20Sorting)
 7. [Sequence Reconstruction](https://github.com/pikkaa215/front-end-/blob/main/leetcode/605%20%C2%B7%20Sequence%20Reconstruction)
+
+DFS
+
+1. [Minimum Subtree](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Minimum%20subtree)
