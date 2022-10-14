@@ -1,0 +1,30 @@
+Given a binary tree, find the subtree with minimum sum. Return the root of the subtree.
+The range of input and output data is in int.
+给一棵二叉树, 找到和为最小的子树, 返回其根节点（不是根节点的和）。
+输入输出数据范围都在int内。
+
+public Class Solution {
+  private int minSum;
+  private TreeNode minRoot;
+  
+  public TreeNode findSubtree(TreeNode root) {
+         minSum = Integer.MAX_VALUE;
+         minRoot = null;
+         calculateTreeSum(root);
+         return minRoot;
+      
+   }
+   private int calculateTreeSum(TreeNode root){
+        if (root == null) {
+        return 0;
+        }
+        int leftSum = calculateTreeSum(root.left);
+        int rightSum = calculateTreeSum(root.right);
+        int sum = leftSum + rightSum;
+        if (sum < minSum) {
+          minSum = sum;
+          minRoot = root;
+         }
+         return sum;
+   }
+}
