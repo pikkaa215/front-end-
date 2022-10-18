@@ -82,3 +82,4 @@ DFS
 
 1. [Minimum Subtree](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Minimum%20subtree)
 2. [Lowest Common Ancestor](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Lowest%20common%20ancestor)
+3. [Lowest Common Ancestor](https://github.com/pikkaa215/front-end-/blob/main/leetcode/Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree)
