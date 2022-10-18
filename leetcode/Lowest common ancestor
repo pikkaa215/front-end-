@@ -1,0 +1,23 @@
+Given the root and two nodes in a Binary Tree. Find the lowest common ancestor(LCA) of the two nodes.
+The nearest common ancestor of two nodes refers to the nearest common node among all the parent nodes of two nodes (including the two nodes).
+In addition to the left and right son pointers, each node also contains a father pointer, parent, pointing to its own father.
+
+public class Solution {
+   public lowestCommonAncestorII(ParentNode root, ParentTreeNode A, ParentTreeNode B) {
+     Set HashSet<ParentNode>() parentSet = new HashSet();
+     ParentNode curr = A;
+     while (curr != null) {
+       parentSet.add(curr);
+       curr = curr.parent;
+       }
+     
+     curr = B;
+     while (curr != null) {
+     if (parentSet.contains(curr)) {
+         return curr;
+         }
+     curr = curr.parent;
+     }
+     return null;
+   }
+}
