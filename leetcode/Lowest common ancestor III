@@ -1,0 +1,51 @@
+Given the root and two nodes in a Binary Tree. Find the lowest common ancestor(LCA) of the two nodes.
+The nearest common ancestor of two nodes refers to the nearest common node among all the parent nodes of two nodes (including the two nodes).
+Return null if LCA does not exist.
+
+class ResultType{
+  public boolean a_exist, b_exist;
+  public TreeNode node;
+  ResultType(boolean a, boolean b, TreeNode m){
+    a_exist = a;
+    b_exist = b;
+    node = n;  
+   }
+  }
+  
+  public Class Solution{
+    public TreeNode LowestCommonAncestor(TreeNode root, TreeNode A, TreeNode B){
+      ResultType rt = helper(root, A, B);
+      return (rt.a_exist && rt.b_exist) ? rt.node : null;
+    }
+    
+    public ResultType helper(TreeNode A, TreeNode B, TreeNode root){
+       if (root == null) {
+        return ResultType(false, false, null);
+       }
+      ResultType left = helper(root.left, A, B);
+      ResultType right = helper(root.right, A, B);
+      
+      boolean a_exist = left.a_exist || right.a_exist || root == A;
+      boolean b_exist = left.b_exist || right.b_exist || root == B;
+      
+      if (root == A || root == B) {
+         return (a_exist, b_exist, root);    
+      }
+      
+      if (left.node != null && right.node != null) {
+      return new ResultType(a_exist, b_exist, root);}
+      
+       if (left.node != null) {
+      return new ResultType(a_exist, b_exist, left.node);
+      }
+      
+       if (right.node != null) {
+      return new ResultType(a_exist, b_exist, right.node);
+      }
+      return new ResultType(a_exist, b_exist, null);
+      
+      
+      
+       
+    }
+  }
